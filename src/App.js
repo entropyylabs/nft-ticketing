@@ -32,8 +32,18 @@ function App() {
   return (
     <div className='App'>
       {!connected ? (
-        <div>
-          Hello welcome!<button onClick={() => connect(true)}>Connect</button>
+        <div className='page connect-page'>
+          <img
+            src='https://i.postimg.cc/VvBf46Qm/Daft-Punk-Copy-1-1280x577-1.png'
+            alt=''
+          />
+          <h5 className='welcome-mssg'>Welcome to</h5>
+          <h5 className='welcome-mssg name'>-----</h5>
+          <div className='connect-btn-holder'>
+            <button className='landing-btn' onClick={() => connect(true)}>
+              Connect Wallet
+            </button>
+          </div>
         </div>
       ) : (
         <Landing />
