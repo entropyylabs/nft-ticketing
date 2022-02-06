@@ -36,7 +36,7 @@ function App() {
 
   return (
     <div className='App'>
-      {!connected ? (
+      {connected ? (
         <div className='page connect-page'>
           <img
             src='https://i.postimg.cc/VvBf46Qm/Daft-Punk-Copy-1-1280x577-1.png'
