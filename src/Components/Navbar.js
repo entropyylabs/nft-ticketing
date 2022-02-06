@@ -15,7 +15,9 @@ function Navbar() {
               setShow(!show);
             }}
           ></i>
+          <div className='stretcher'></div>
         </div>
+
         <div
           className='menu-items'
           style={{ display: `${show ? "block" : "none"}` }}
