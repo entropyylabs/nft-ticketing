@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Explore from "./Pages/Explore";
 import Create from "./Pages/Create";
 import Navbar from "./Components/Navbar";
+import MintTickets from "./Pages/MintTickets";
 
 function App() {
   const network = "polygon";
@@ -56,6 +57,7 @@ function App() {
             <Route path='/' element={<Landing />} />
             <Route path='/explore' element={<Explore />} />
             <Route path='/create' element={<Create />} />
+            <Route path='/mint' element={<MintTickets />} />
           </Routes>
         </Router>
       )}

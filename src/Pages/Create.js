@@ -1,4 +1,5 @@
 import React from "react";
+import CreateEvent from "../Components/CreateEvent";
 
 function Create() {
   return (
@@ -7,6 +8,7 @@ function Create() {
         <h1>Create</h1>
         <div className='stretcher'></div>
       </div>
+      <CreateEvent />
     </div>
   );
 }
