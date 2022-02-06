@@ -1,18 +1,6 @@
 import React from "react";
-import { sequence } from "0xsequence";
-import { ethers } from "ethers";
 
-function Wallet({ wallet }) {
-  const getChainID = async () => {
-    console.log("chainId:", await wallet.getChainId());
-
-    const provider = wallet.getProvider();
-    console.log("provider.getChainId()", await provider.getChainId());
-
-    const signer = wallet.getSigner();
-    console.log("signer.getChainId()", await signer.getChainId());
-  };
-
+function TicketTile({ img, organizer, name, link, price }) {
   const sendETH = async (amt, toAddress) => {
     const signer = wallet.getSigner(); // select DefaultChain signer by default
 
@@ -42,12 +30,29 @@ function Wallet({ wallet }) {
       await provider.getBalance(toAddress)
     );
   };
-
   return (
-    <div>
-      <button onClick={() => getChainID()}>ChainID</button>
+    <div className='ticket-tile'>
+      <img src={img} alt='' srcset='' />
+      <div className='ticket-tile-details'>
+        <h5 className='name'>{name}</h5>
+        <h5 className='organizer'>
+          <i class='far fa-user'></i> {organizer}
+        </h5>
+        <div className='ticket-tile-bottom'>
+          <button
+            onClick={() => {
+              sendETH(price, address);
+            }}
+          >
+            Buy {price}
+          </button>
+          <a href={link} target='_blank'>
+            <i class='fab fa-cart'></i>
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
 
-export default Wallet;
+export default TicketTile;
