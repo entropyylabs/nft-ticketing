@@ -8,6 +8,8 @@ body {
 .page {
   min-height: 100%;
   width: max-content;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Landing pages */
@@ -48,7 +50,7 @@ body {
   margin-top: 300px;
   text-align: left;
   margin-left: 78px;
-  padding-bottom: 100px;
+  padding-bottom: 150px;
 }
 
 .landing-btn-holder {
@@ -67,4 +69,50 @@ body {
 
 .landing-btn.list {
   width: 422px;
+}
+
+/* Navbar */
+.navbar {
+  padding: 20px;
+  padding-bottom: 0px;
+  background: #80d0c7;
+}
+
+.navbar .menu {
+  font-size: 42px;
+}
+
+.menu-items {
+  position: absolute;
+  z-index: 10;
+  background-color: #ededed;
+  padding: 20px;
+  border-radius: 35px;
+}
+
+.menu-items ul {
+  list-style-type: none;
+  padding-left: 10px;
+  font-size: 20px;
+  margin-block-end: 0px;
+}
+
+.menu-items ul li {
+  margin: 20px;
+  padding-bottom: 15px;
+  font-size: 24px;
+  border-bottom: 1px solid black;
+}
+
+/* Page */
+.page-header {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: #80d0c7;
+  padding: 0px 20px;
+}
+
+.stretcher {
+  width: 738px;
 }

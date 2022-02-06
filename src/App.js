@@ -4,6 +4,10 @@ import { sequence } from "0xsequence";
 import { ethers } from "ethers";
 import Wallet from "./Wallet";
 import Landing from "./Pages/Landing";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Explore from "./Pages/Explore";
+import Create from "./Pages/Create";
+import Navbar from "./Components/Navbar";
 
 function App() {
   const network = "polygon";
@@ -46,7 +50,14 @@ function App() {
           </div>
         </div>
       ) : (
-        <Landing />
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route path='/' element={<Landing />} />
+            <Route path='/explore' element={<Explore />} />
+            <Route path='/create' element={<Create />} />
+          </Routes>
+        </Router>
       )}
       {/* <Wallet wallet={wallet} /> */}
     </div>
