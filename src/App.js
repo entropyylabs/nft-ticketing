@@ -18,7 +18,7 @@ function App() {
 
   const connect = async (authorize = false) => {
     const connectDetails = await wallet.connect({
-      app: "Ticketing Dapp",
+      app: "NFTickets",
       authorize,
       keepWalletOpened: true,
     });
