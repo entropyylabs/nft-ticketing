@@ -9,7 +9,7 @@ function Landing() {
         alt=''
       />
       <h5 className='welcome-mssg'>Welcome to</h5>
-      <h5 className='welcome-mssg name'>-----</h5>
+      <h5 className='welcome-mssg name'>NFTickets</h5>
       <div className='landing-btn-holder'>
         <Link to='/explore'>
           <button className='landing-btn explore'>Explore</button>

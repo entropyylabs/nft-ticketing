@@ -43,7 +43,7 @@ function App() {
             alt=''
           />
           <h5 className='welcome-mssg'>Welcome to</h5>
-          <h5 className='welcome-mssg name'>-----</h5>
+          <h5 className='welcome-mssg name'>NFTickets</h5>
           <div className='connect-btn-holder'>
             <button className='landing-btn' onClick={() => connect(true)}>
               Connect Wallet
